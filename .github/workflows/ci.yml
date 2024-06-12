@@ -18,5 +18,6 @@ jobs:
 
       - name: Build the Docker image
         run: docker build -t shintakino/next-js-portfolio .
+
       - name: Push to Dockerhub
         run: docker push shintakino/next-js-portfolio:latest
