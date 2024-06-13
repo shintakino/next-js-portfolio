@@ -12,8 +12,8 @@ jobs:
 
     steps:
       - name: Pull Docker image
-        run: docker pull shintakino/next-js-portfolio:latest
+        run: sudo docker pull shintakino/next-js-portfolio:latest
       - name: Delete Old docker container
         run: sudo docker rm -f cicd-pipeline-container || true
       - name: Run Docker Container
-        run: docker run -d -p 3000:3000 --name cicd-pipeline-container shintakino/next-js-portfolio
+        run: sudo docker run -d -p 3000:3000 --name cicd-pipeline-container shintakino/next-js-portfolio
